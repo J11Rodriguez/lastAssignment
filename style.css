@@ -7,6 +7,10 @@ body {
     background-color: #1a1a1a; 
 }
 
+p{
+    font-size: medium;
+    color: white;
+}
 /* navbar header */
 
 
@@ -57,6 +61,7 @@ header {
 
 .card {
     width: 400px;
+    height: 100%; 
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -70,7 +75,8 @@ header {
 
 .card img {
     width: 100%;
-    height: auto;
+    max-height: 200px; 
+    object-fit: cover; 
     border-radius: 8px 8px 0 0;
 }
 
@@ -79,39 +85,46 @@ header {
 }
 
 
-/* Tus estilos anteriores ... */
+
 
 .separator {
     height: 50px;
-    background-color: #333; /* Color gris oscuro para el separador */
+    background-color: #333; 
 }
 
-/* Más estilos según sea necesario ... */
+
 
 /*  table */
 
-.table {
-    background-color: #8f8989; /* Color gris claro para el fondo de la tabla */
+table {
     padding: 20px;
+    transition: background-color 0.3s ease; 
+    overflow: hidden; /* Agregamos overflow: hidden para asegurar que la transición no cause problemas con el contenido flotante */
 }
 
-table {
+.table:hover {
+    background-color: #a8a2a2; /* Cambia el color de fondo al pasar el ratón sobre la sección */
+}
+
+.table table {
     background-color: #8f8989;
     width: 100%;
     border-collapse: collapse;
+    float: left;
+    margin-right: 20px;
 }
 
-th, td {
+.table th,
+.table td {
     background-color: #8f8989;
     border: 1px solid black;
     padding: 8px;
     text-align: left;
 }
 
-th {
+.table th {
     background-color: #8f8989;
 }
-
 
 footer {
     background-color: #333;
