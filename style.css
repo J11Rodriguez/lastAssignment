@@ -121,35 +121,30 @@ table {
     background-color: #8f8989;
 }
 
-/* skills */
-
-.skills {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.skill-1, .skill-2, .skill-3 {
-    width: 30%;
-    margin: 20px;
+/* footer */
+footer {
+    background-color: #f2f2f2;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
     text-align: center;
 }
 
-.skill-1 {
-    background-color: #7cb9e8;
+.contact-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fcf2f2;
 }
 
-.skill-2 {
-    background-color: #a3e1d4;
+.contact-links a:hover {
+    text-decoration: underline;
 }
 
-.skill-3 {
-    background-color: #f0a3d4;
+footer p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
 }
+
+
 /*  forms page */
 
 form {
@@ -191,4 +186,78 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+/* skills page */
+
+.cards2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para cada carta */
+.card2 {
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Colores para cada carta */
+.card2:nth-child(1) {
+    background-color: #3498db;
+}
+
+.card2:nth-child(2) {
+    background-color: #e74c3c;
+}
+
+.card2:nth-child(3) {
+    background-color: #2ecc71;
+}
+
+.card2:nth-child(4) {
+    background-color: #f39c12;
+}
+
+/* Hover effect para cada carta */
+.card2:hover {
+    transform: scale(1.05);
+}
+
+/* Contenido dentro de cada carta */
+.card2 h2 {
+    color: #fff;
+}
+
+/* Animación para el crecimiento */
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Aplicar la animación a las cartas */
+.card2:hover {
+    animation: grow 0.5s ease-in-out;
+}
+@media (max-width: 600px) {
+    .card {
+        width: 100%; 
+        margin: 0; 
+    }
 }
