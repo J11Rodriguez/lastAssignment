@@ -129,7 +129,7 @@ footer {
 }
 
 .contact-links a {
-    margin: 0 15px;
+    margin: 15px 15px;
     text-decoration: none;
     color: #fcf2f2;
 }
@@ -139,9 +139,13 @@ footer {
 }
 
 footer p {
-    margin-top: 15px;
+    margin-top: 45px;
     font-size: 14px;
     color: #666;
+}
+
+footer a {
+    margin: 15px 15px;
 }
 
 
@@ -190,16 +194,15 @@ footer {
 
 /* skills page */
 
-.cards2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
+ 
+h1{
+    text-align: center;
 }
 
-/* Estilos para cada carta */
-.card2 {
+.card1,
+.card2,
+.card3,
+.card4 {
     flex: 1;
     max-width: 300px;
     padding: 20px;
@@ -211,53 +214,54 @@ footer {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Colores para cada carta */
-.card2:nth-child(1) {
-    background-color: #3498db;
+.card1 {
+    background-color: #3498db; 
 }
 
-.card2:nth-child(2) {
-    background-color: #e74c3c;
+.card2 {
+    background-color: #e74c3c; 
 }
 
-.card2:nth-child(3) {
-    background-color: #2ecc71;
+.card3 {
+    background-color: #2ecc71; 
 }
 
-.card2:nth-child(4) {
-    background-color: #f39c12;
+.card4 {
+    background-color: #f39c12; 
 }
 
-/* Hover effect para cada carta */
-.card2:hover {
+.introduction .card1:hover,
+.introduction .card2:hover,
+.introduction .card3:hover,
+.introduction .card4:hover {
     transform: scale(1.05);
 }
 
-/* Contenido dentro de cada carta */
-.card2 h2 {
+.card1 h2,
+.card2 h2,
+.card3 h2,
+.card4 h2 {
     color: #fff;
 }
 
-/* Animación para el crecimiento */
-@keyframes grow {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+.card1 p,
+.card2 p,
+.card3 p,
+.card4 p {
+    color: #333;
 }
 
-/* Aplicar la animación a las cartas */
-.card2:hover {
-    animation: grow 0.5s ease-in-out;
-}
-@media (max-width: 600px) {
-    .card {
-        width: 100%; 
-        margin: 0; 
+@media (max-width: 768px) {
+    .introduction {
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4 {
+        max-width: none; 
+        margin: 20px 0; 
     }
 }
