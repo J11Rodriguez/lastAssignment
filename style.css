@@ -7,6 +7,8 @@ body {
     background-color: #1a1a1a; 
 }
 
+h2{text-align: center;}
+
 p{
     font-size: medium;
     color: white;
@@ -265,3 +267,11 @@ h1{
         margin: 20px 0; 
     }
 }
+
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  
